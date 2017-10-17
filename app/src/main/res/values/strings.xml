@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Ex1</string>
+    <string-array name="exlist">
+        <item>Exercise 1</item>
+        <item>Exercise 2</item>
+        <item>Exercise 3</item>
+    </string-array>
+</resources>
