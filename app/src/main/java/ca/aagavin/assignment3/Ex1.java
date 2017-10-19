@@ -7,6 +7,7 @@ import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
 import android.support.v7.app.AppCompatActivity;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
@@ -120,5 +121,29 @@ public class Ex1 extends AppCompatActivity implements AdapterView.OnItemSelected
         this._starty = 10;
         this._endx =10;
         this._endy =10;
+    }
+
+    //Activate the DPAD on emulator:
+    //change the settings in config.ini file in .android folder
+    //hw.dPad=yes
+    //hw.mainKeys=yes
+    public boolean onKeyDown(int keyCode, KeyEvent event)
+    {
+        switch(keyCode)
+        {
+            case KeyEvent.KEYCODE_DPAD_DOWN:
+                this.buttonDownClick(null);
+                return true;
+            case KeyEvent.KEYCODE_DPAD_UP:
+                this.buttonUpClick(null);
+                return true;
+            case KeyEvent.KEYCODE_DPAD_RIGHT:
+                this.buttonRightClick(null);
+                return true;
+            case  KeyEvent.KEYCODE_DPAD_LEFT:
+                this.buttonLeftClick(null);
+                return true;
+        }
+        return false;
     }
 }
