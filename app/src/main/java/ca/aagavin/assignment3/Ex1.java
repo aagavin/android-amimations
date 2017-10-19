@@ -28,6 +28,10 @@ public class Ex1 extends AppCompatActivity implements AdapterView.OnItemSelected
     private Paint _paint;
     private Canvas _canvas;
 
+    /**
+     * onCreate
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,8 +123,8 @@ public class Ex1 extends AppCompatActivity implements AdapterView.OnItemSelected
         this.clearBtnClick(view);
         this._startx = 10;
         this._starty = 10;
-        this._endx =10;
-        this._endy =10;
+        this._endx = 10;
+        this._endy = 10;
     }
 
     //Activate the DPAD on emulator:

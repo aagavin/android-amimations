@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 startActivity(new Intent(this, Ex2.class));
                 break;
             case 2:
+                startActivity(new Intent(this, Ex3.class));
                 break;
             default:
                 break;

@@ -16,9 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Ex1" android:label="Ex 1" />
-        <activity android:name=".Ex2" android:label="Ex 2" />
-
+        <activity
+            android:name=".Ex1"
+            android:label="Ex 1"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Ex2"
+            android:label="Ex 2"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Ex3"
+            android:label="Ex 3"
+            android:parentActivityName=".MainActivity" />
     </application>
 
 </manifest>
