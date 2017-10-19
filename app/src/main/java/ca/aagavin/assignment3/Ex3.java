@@ -11,7 +11,6 @@ public class Ex3 extends AppCompatActivity {
 
     private ImageView _moonImageView;
     private Animation _animation;
-    private Animation _animation2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +26,13 @@ public class Ex3 extends AppCompatActivity {
 
         this._animation = AnimationUtils.loadAnimation(this, R.anim.anim);
         this._animation.setRepeatMode(Animation.INFINITE);
-        this._animation2 = AnimationUtils.loadAnimation(this, R.anim.anim2);
 
         this._moonImageView.startAnimation(this._animation);
 
 
+    }
+
+    public void stopBtnClick(View view) {
+        this._moonImageView.clearAnimation();
     }
 }
