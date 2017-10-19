@@ -18,7 +18,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="startBtnClick"
-            android:text="Start" />
+            android:text="@string/start" />
 
         <Button
             android:id="@+id/stopButton"
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="stopBtnClick"
-            android:text="Stop" />
+            android:text="@string/stop" />
 
     </LinearLayout>
 

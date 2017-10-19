@@ -14,10 +14,10 @@
 
         <TextView
             android:id="@+id/textView4"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Operation of a 7 pin lock"
+            android:text="@string/pin_lock"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="30sp" />
@@ -34,7 +34,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onStartClick"
-            android:text="Start" />
+            android:text="@string/start" />
 
         <Button
             android:id="@+id/stopButton"
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onStopClick"
-            android:text="Stop" />
+            android:text="@string/stop" />
     </LinearLayout>
 
     <LinearLayout
@@ -52,7 +52,7 @@
 
         <ImageView
             android:id="@+id/keyImageView"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
     </LinearLayout>
