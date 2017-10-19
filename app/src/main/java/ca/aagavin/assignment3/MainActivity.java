@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
@@ -22,14 +21,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     @Override
     public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
-        Toast.makeText(getApplicationContext(), id+"",
-                Toast.LENGTH_SHORT).show();
 
         switch ((int) id){
             case 0:
                 startActivity(new Intent(this, Ex1.class));
                 break;
             case 1:
+                startActivity(new Intent(this, Ex2.class));
                 break;
             case 2:
                 break;
