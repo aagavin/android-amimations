@@ -9,7 +9,10 @@ import android.widget.ListView;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-
+    /**
+     * onCreate
+     * @param savedInstanceState Bundle
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -18,7 +21,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         ((ListView)findViewById(R.id.mainlist)).setOnItemClickListener(this);
     }
 
-
+    /**
+     * implements OnItemClickListener
+     * @param adapter
+     * @param view
+     * @param position
+     * @param id
+     */
     @Override
     public void onItemClick(AdapterView<?> adapter, View view, int position, long id) {
 

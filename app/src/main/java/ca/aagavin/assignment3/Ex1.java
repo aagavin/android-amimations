@@ -28,9 +28,10 @@ public class Ex1 extends AppCompatActivity implements AdapterView.OnItemSelected
     private Paint _paint;
     private Canvas _canvas;
 
+
     /**
      * onCreate
-     * @param savedInstanceState
+     * @param savedInstanceState Bundle
      */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,14 +57,30 @@ public class Ex1 extends AppCompatActivity implements AdapterView.OnItemSelected
     }
 
 
+    /**
+     * spinner event handler
+     * sets the line width
+     * @param adapterView
+     * @param view
+     * @param i
+     * @param l
+     */
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         this._paint.setStrokeWidth(Integer.parseInt(adapterView.getItemAtPosition(i).toString()));
     }
 
+    /**
+     * @param adapterView
+     */
     @Override
     public void onNothingSelected(AdapterView<?> adapterView) {}
 
+    /**
+     * Radio group event handler
+     * @param radioGroup
+     * @param i
+     */
     @Override
     public void onCheckedChanged(RadioGroup radioGroup, @IdRes int i) {
         RadioButton radioButton = (RadioButton) findViewById(i);
@@ -84,6 +101,11 @@ public class Ex1 extends AppCompatActivity implements AdapterView.OnItemSelected
 
     }
 
+    /**
+     * common button click shared by all image buttons
+     * @param valueX
+     * @param valueY
+     */
     private void _buttonClick(int valueX, int valueY){
         _endx +=valueX;
         _endy +=valueY;
@@ -91,6 +113,10 @@ public class Ex1 extends AppCompatActivity implements AdapterView.OnItemSelected
         this._drawimage.invalidate();
     }
 
+    /**
+     * private draw line method
+     * draws the line on the canvas
+     */
     private void _drawLine()    {
         this._canvas.drawLine(_startx, _starty, _endx, _endy, this._paint);
         _startx = _endx;
@@ -98,27 +124,51 @@ public class Ex1 extends AppCompatActivity implements AdapterView.OnItemSelected
     }
 
 
+    /**
+     * Button down handler
+     * @param view
+     */
     public void buttonDownClick(View view) {
         this._buttonClick(0,10);
     }
 
+    /**
+     * Button up handler
+     * @param view
+     */
     public void buttonUpClick(View view) {
         this._buttonClick(0,-10);
     }
 
+    /**
+     * Button Right handler
+     * @param view
+     */
     public void buttonRightClick(View view) {
         this._buttonClick(10,0);
     }
 
+    /**
+     * Button Left Click
+     * @param view
+     */
     public void buttonLeftClick(View view) {
         this._buttonClick(-10,0);
     }
 
+    /**
+     * Clears the canvas
+     * @param view
+     */
     public void clearBtnClick(View view) {
         this._drawimage.invalidate();
         this._canvas.drawColor(Color.BLACK);
     }
 
+    /**
+     * Resets everything
+     * @param view
+     */
     public void resetBtnClick(View view) {
         this.clearBtnClick(view);
         this._startx = 10;
