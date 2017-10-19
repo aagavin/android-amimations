@@ -17,7 +17,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="sdfsdf" />
+            android:text="Operation of a 7 pin lock"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
     </LinearLayout>
 
     <LinearLayout
